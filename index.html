@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Module 5 Project</title>
+    
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -12,41 +13,191 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <div class="row">
-        <h1 class="col-md-12 text-center lead">Script Programming Jeopardy</h1>
-    </div>
-    <div class="row">
-        <div class="col-md-12 text-center small">Including javascript, jQuery, and Boostrap</div>
-    </div>
-    <div class="row">
-        <div class="col-md-12 text-center">Score: </div>
-    </div>
-    <div class="row">
-        <div class="col-md-4">
-            <h3 class="text-center">Category One</h3>
-            <div class="btn-group-vertical btn-block">
-                <button class="btn btn-warning ">$100</button>
-                <button class="btn btn-warning">$200</button>
-                <button class="btn btn-warning">$300</button>
-            </div>
-            
+    <div class="container">
+        <div class="row">
+            <h1 class="col-md-12 text-center lead">Script Programming Jeopardy</h1>
         </div>
-        <div class="col-md-4">
-            <h3 class="text-center">Category Two</h3>
-            <div class="btn-group-vertical btn-block">
-                <button class="btn btn-warning ">$100</button>
-                <button class="btn btn-warning">$200</button>
-                <button class="btn btn-warning">$300</button>
+        <div class="row">
+            <div class="col-md-12 text-center small">Including javascript, jQuery, and Boostrap</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center" id="score"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h3 class="text-center">Shinnoh Pokémon</h3>
+                <div class="btn-group-vertical btn-block">
+                    <button class="btn btn-warning " data-toggle="modal" data-target="#shinnoh100">$100</button>
+                    <button class="btn btn-warning" data-toggle="modal" data-target="#shinnoh200">$200</button>
+                    <button class="btn btn-warning" data-toggle="modal" data-target="#shinnoh300">$300</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h3 class="text-center">Unova Pokémon</h3>
+                <div class="btn-group-vertical btn-block">
+                    <button class="btn btn-warning " data-toggle="modal" data-target="#unova100">$100</button>
+                    <button class="btn btn-warning" data-toggle="modal" data-target="#unova200">$200</button>
+                    <button class="btn btn-warning" data-toggle="modal" data-target="#unova300">$300</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h3 class="text-center">Alola Pokémon</h3>
+                <div class="btn-group-vertical btn-block">
+                    <button class="btn btn-warning " data-toggle="modal" data-target="#alola100">$100</button>
+                    <button class="btn btn-warning" data-toggle="modal" data-target="#alola200">$200</button>
+                    <button class="btn btn-warning" data-toggle="modal" data-target="#alola300">$300</button>
+                </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <h3 class="text-center">Category Three</h3>
-            <div class="btn-group-vertical btn-block">
-                <button class="btn btn-warning ">$100</button>
-                <button class="btn btn-warning">$200</button>
-                <button class="btn btn-warning">$300</button>
+        
+        <!--Modals Down Here Yo --->
+        <div id="shinnoh100" class="modal fade" role="option">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Shinnoh for $100</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>In "Pokemon Diamond", can you catch the legendary pokemon Palkia?</p>
+                        
+                        <button class="btn btn-success btn-block" id="shinnoh100true">True</button>
+                        <button class="btn btn-danger btn-block" id="shinnoh100false">False</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shinnoh200" class="modal fade" role="option">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Shinnoh for $200</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Is Turtwig's next evolution Torterra?</p>
+                        
+                        <button class="btn btn-success btn-block" id="shinnoh200true">Yes</button>
+                        <button class="btn btn-danger btn-block" id="shinnoh200false">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shinnoh300" class="modal fade" role="option">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Shinnoh for $300</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Do you get Riolu by evolving Lucario?</p>
+                        
+                        <button class="btn btn-success btn-block" id="shinnoh300true">Yes</button>
+                        <button class="btn btn-danger btn-block" id="shinnoh300false">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="unova100" class="modal fade" role="option">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Unova for $100</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>In "Pokemon White", can you catch the legendary pokemon Zekrom?</p>
+                        
+                        <button class="btn btn-success btn-block" id="unova100true">True</button>
+                        <button class="btn btn-danger btn-block" id="unova100false">False</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="unova200" class="modal fade" role="option">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Unova for $200</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Is Snivy's next evolution Serperior?</p>
+                        
+                        <button class="btn btn-success btn-block" id="unova200true">Yes</button>
+                        <button class="btn btn-danger btn-block" id="unova200false">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="unova300" class="modal fade" role="option">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Unova for $300</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Do you get Petilil from evolving Lilligant?</p>
+                        
+                        <button class="btn btn-success btn-block" id="unova300true">Yes</button>
+                        <button class="btn btn-danger btn-block" id="unova300false">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="alola100" class="modal fade" role="option">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Alola for $100</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>In "Pokemon Moon", can you catch the legendary pokemon Solgaleo?</p>
+                        
+                        <button class="btn btn-success btn-block" id="alola100true">True</button>
+                        <button class="btn btn-danger btn-block" id="alola100false">False</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="alola200" class="modal fade" role="option">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Alola for $200</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Is Rowlet's next evolution Decidueye?</p>
+                        
+                        <button class="btn btn-success btn-block" id="alola200true">Yes</button>
+                        <button class="btn btn-danger btn-block" id="alola200false">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="alola300" class="modal fade" role="option">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Alola for $300</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Do you get Mudbray from evolving Mudsdale?</p>
+                        
+                        <button class="btn btn-success btn-block" id="alola300true">Yes</button>
+                        <button class="btn btn-danger btn-block" id="alola300false">No</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
   </body>
+    <script src="script.js"></script>
 </html>
